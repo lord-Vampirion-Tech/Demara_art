@@ -26,13 +26,13 @@ body .info {
 body .info img {
   position: absolute;
   border: 3px solid rgb(57, 44, 79);
-  left: -120px;
+  left: -140px;
   height: 60%;
   border-radius: 100%;
   box-shadow: 0 0 10px 1px rgb(57, 44, 79);
 }
 body .info h1 {
-  font-size: 100px;
+  font-size: 80px;
   position: relative;
   text-shadow: 0 0 10px #fff;
 }
