@@ -6,7 +6,7 @@
   text-decoration: none;
   box-sizing: border-box;
   color: #fff;
-  font-family: "Are You Serious", cursive;
+  font-family: "Caveat", cursive;
   font-weight: 100;
 }
 
@@ -48,7 +48,6 @@ body .info h1::before {
 }
 body .info p {
   font-size: 30px;
-  font-family: "Caveat", cursive;
   text-shadow: 0 0 10px #fff;
 }
 body .links {
