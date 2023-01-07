@@ -12,6 +12,7 @@
 
 body {
   background: #191823;
+  position: relative;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -29,7 +30,7 @@ body .info img {
   left: -140px;
   height: 60%;
   border-radius: 100%;
-  box-shadow: 0 0 10px 1px rgb(57, 44, 79);
+  box-shadow: -2px -2px 10px 5px rgba(59, 57, 83, 0.462745098), 2px 2px 10px 5px rgba(0, 0, 0, 0.462745098);
 }
 body .info h1 {
   font-size: 80px;
@@ -63,11 +64,22 @@ body .links li {
   justify-content: center;
   align-items: center;
   border: 2px solid rgb(57, 44, 79);
-  box-shadow: 0 0 10px 1px rgb(57, 44, 79);
+  box-shadow: -2px -2px 5px 2.5px rgba(59, 57, 83, 0.462745098), 2px 2px 5px 2.5px rgba(0, 0, 0, 0.462745098);
+}
+body .links li a {
+  display: flex;
+}
+body .links li a img {
+  width: 100%;
+  border-radius: 100%;
+  transition: 0.25s;
+}
+body .links li img:hover {
+  box-shadow: 0 0 50px 5px var(--clr);
 }
 body .imgs {
   margin-top: 20px;
-  width: 900px;
+  width: 880px;
   gap: 10px;
   display: flex;
   justify-content: center;
@@ -77,19 +89,13 @@ body .imgs img {
   width: 200px;
   border-radius: 10px;
   border: 2px solid rgb(57, 44, 79);
-  box-shadow: 0 0 10px 1px rgb(57, 44, 79);
+  box-shadow: -2.5px -2.5px 10px 2.5px rgba(59, 57, 83, 0.462745098), 2.5px 2.5px 10px 2.5px rgba(0, 0, 0, 0.462745098);
+  cursor: pointer;
 }
-body .imgs img:nth-child(1) {
-  border-top-left-radius: 50px;
-}
-body .imgs img:nth-child(4) {
-  border-top-right-radius: 50px;
-}
-body .imgs img:nth-child(5) {
-  border-bottom-left-radius: 50px;
-}
-body .imgs img:nth-child(8) {
-  border-bottom-right-radius: 50px;
+body .imgs .active {
+  position: absolute;
+  width: 50%;
+  top: auto;
 }
 
 @media (max-width: 400px) {
@@ -108,14 +114,5 @@ body .imgs img:nth-child(8) {
   body .imgs img {
     width: 150px;
     border-radius: 10px;
-  }
-  body .imgs img:nth-child(4), body .imgs img:nth-child(5) {
-    border-radius: 10px;
-  }
-  body .imgs img:nth-child(2) {
-    border-top-right-radius: 50px;
-  }
-  body .imgs img:nth-child(7) {
-    border-bottom-left-radius: 50px;
   }
 }/*# sourceMappingURL=style.css.map */
