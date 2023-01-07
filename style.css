@@ -90,12 +90,6 @@ body .imgs img {
   border-radius: 10px;
   border: 2px solid rgb(57, 44, 79);
   box-shadow: -2.5px -2.5px 10px 2.5px rgba(59, 57, 83, 0.462745098), 2.5px 2.5px 10px 2.5px rgba(0, 0, 0, 0.462745098);
-  cursor: pointer;
-}
-body .imgs .active {
-  position: absolute;
-  width: 50%;
-  top: auto;
 }
 
 @media (max-width: 400px) {
