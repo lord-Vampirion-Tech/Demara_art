@@ -86,10 +86,31 @@ body .imgs {
   flex-wrap: wrap;
 }
 body .imgs img {
-  width: 200px;
+  height: 200px;
   border-radius: 10px;
   border: 2px solid rgb(57, 44, 79);
   box-shadow: -2.5px -2.5px 10px 2.5px rgba(59, 57, 83, 0.462745098), 2.5px 2.5px 10px 2.5px rgba(0, 0, 0, 0.462745098);
+  cursor: pointer;
+  z-index: 0;
+}
+body .imgs #back {
+  position: absolute;
+}
+@media (min-width: 400px) {
+  body .imgs .active {
+    position: absolute;
+    height: 90vh;
+    top: 40px;
+    z-index: 1;
+    border: 0;
+  }
+  body .imgs .back {
+    background: rgb(28, 28, 28);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+  }
 }
 
 @media (max-width: 400px) {
@@ -101,11 +122,13 @@ body .imgs img {
     position: relative;
     left: 0;
     height: 200px;
+    width: 200px;
   }
   body .imgs {
     width: 310px;
   }
   body .imgs img {
+    height: 150px;
     width: 150px;
     border-radius: 10px;
   }
