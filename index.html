@@ -8,6 +8,8 @@
   <link rel="shortcut icon" href="img/Demara.jpg" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -15,12 +17,12 @@
 
   <title>Demara</title>
 
-  <meta name="og:title" content="сайт-визитка Demara_art">
-  <meta name="og:site_name" content="Demara">
-  <meta name="og:url" content="https://lord-vampirion-tech.github.io/Demara_art/"> 
-  <meta name="og:image" content="https://lord-vampirion-tech.github.io/Demara_art/img/Demara.jpg">
-  <meta name="og:image:width" content="1024" />
-  <meta name="og:image:height" content="1024" />
+  <meta property="og:title" content="сайт-визитка Demara_art">
+  <meta property="og:site_name" content="Demara">
+  <meta property="og:url" content="https://lord-vampirion-tech.github.io/Demara_art/">
+  <meta property="og:image" content="img/Demara.jpg">
+  <meta property="og:image:width" content="1024" />
+  <meta property="og:image:height" content="1024" />
 </head>
 
 <body>
@@ -43,7 +45,7 @@
     </li>
     <li>
       <a target="_blank" href="https://illustrators.ru/users/Demara">
-        <img style="--clr:#fe611e" src="icon/illustrator_icon-icons.com_66102.png" alt="...">
+        <img style="--clr:#fe611e" src="icon/illustrator_icon-icons.com_66102.png" alt="">
       </a>
     </li>
     <li>
@@ -53,15 +55,27 @@
   </ul>
 
   <ul class="imgs">
-    <img src="img/foto_1.jpg" alt="...">
-    <img src="img/foto_2.jpg" alt="...">
-    <img src="img/foto_3.jpg" alt="...">
-    <img src="img/foto_4.jpg" alt="...">
-    <img src="img/foto_5.jpg" alt="...">
-    <img src="img/foto_6.jpg" alt="...">
-    <img src="img/foto_7.jpg" alt="...">
-    <img src="img/foto_8.jpg" alt="...">
+    <img src="img/foto_1.jpg" alt="..." class="">
+    <img src="img/foto_2.jpg" alt="..." class="">
+    <img src="img/foto_3.jpg" alt="..." class="">
+    <img src="img/foto_4.jpg" alt="..." class="">
+    <img src="img/foto_5.jpg" alt="..." class="">
+    <img src="img/foto_6.jpg" alt="..." class="">
+    <img src="img/foto_7.jpg" alt="..." class="">
+    <img src="img/foto_8.jpg" alt="..." class="">
+    <div class="" id="back"></div>
   </ul>
 </body>
+
+<script>
+  $(document).ready(function () {
+    $('.imgs img').each(function () {
+      $(this).click(() => {
+        $(this).toggleClass('active')
+        $("#back").toggleClass('back')
+      })
+    })
+  })
+</script>
 
 </html>
