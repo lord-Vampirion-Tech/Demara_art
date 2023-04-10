@@ -8,10 +8,8 @@
   <link rel="shortcut icon" href="img/Demara.jpg" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
   <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
   <title>Demara</title>
-
   <meta property="og:title" content="сайт-визитка Demara_art">
   <meta property="og:site_name" content="Demara">
   <meta property="og:url" content="https://lord-vampirion-tech.github.io/Demara_art/">
@@ -20,69 +18,72 @@
   <meta property="og:image:height" content="1024" />
 </head>
 
-<body class="neon-text">
-  <div class="center">
+<body>
+  <div>
     <span class="header">
       <img src="img/Demara.jpg" alt="#">
       <div class="text">
         <h1>Smirnova Maria</h1>
-        <span>Demara</span>
-        <span>illustrator</span>
+        <div class="description">
+          <span>Demara</span>
+          <span>illustrator</span>
+        </div>
       </div>
     </span>
     <hr>
     <p>demaraillustrator@gmail.com</p>
-    <section class="links">
-      <span>
-        <a target="_blank" href="https://www.instagram.com/Demara_art/">
-          <img style="--clr:#de4b57" src="icon/icon1.png" alt="...">
-        </a>
-      </span>
-      <span>
-        <a target="_blank" href="https://www.behance.net/demara">
-          <img style="--clr:#4176fa" src="icon/icon2.png" alt="...">
-        </a>
-      </span>
-      <span>
-        <a target="_blank" href="https://illustrators.ru/users/Demara">
-          <img style="--clr:#fe611e" src="icon/icon3.png" alt="">
-        </a>
-      </span>
-      <span>
-        <a target="_blank" href="https://vk.com/demara_art">
-          <img style="--clr:#4d76a1" src="icon/icon4.png" alt="..."></a>
-      </span>
-      <span>
-        <a target="_blank" href="https://www.artstation.com/demara">
-          <img style="--clr:#fff" src="icon/icon5.png" alt="..."></a>
-      </span>
-    </section>
-
-    <section class="img">
-      <img src="img/IMG_1.jpg" alt="#">
-      <img src="img/IMG_2.jpg" alt="#">
-      <img src="img/IMG_3.jpg" alt="#">
-      <img src="img/IMG_4.jpg" alt="#">
-      <img src="img/IMG_5.jpg" alt="#">
-      <img src="img/IMG_6.jpg" alt="#">
-      <img src="img/IMG_7.jpg" alt="#">
-      <img src="img/IMG_8.jpg" alt="#">
-      <img src="img/IMG_9.jpg" alt="#">
-      <img src="img/IMG_10.jpg" alt="#">
-    </section>
   </div>
+  <section class="links">
+    <span>
+      <a target="_blank" href="https://www.instagram.com/Demara_art/">
+        <img style="--clr:#de4b57" src="icon/icon1.png" alt="...">
+      </a>
+    </span>
+    <span>
+      <a target="_blank" href="https://www.behance.net/demara">
+        <img style="--clr:#4176fa" src="icon/icon2.png" alt="...">
+      </a>
+    </span>
+    <span>
+      <a target="_blank" href="https://illustrators.ru/users/Demara">
+        <img style="--clr:#fe611e" src="icon/icon3.png" alt="">
+      </a>
+    </span>
+    <span>
+      <a target="_blank" href="https://vk.com/demara_art">
+        <img style="--clr:#4d76a1" src="icon/icon4.png" alt="..."></a>
+    </span>
+    <span>
+      <a target="_blank" href="https://www.artstation.com/demara">
+        <img style="--clr:#fff" src="icon/icon5.png" alt="..."></a>
+    </span>
+  </section>
+  <section class="img">
+    <img src="img/IMG_1.jpg" alt="#">
+    <img src="img/IMG_2.jpg" alt="#">
+    <img src="img/IMG_3.jpg" alt="#">
+    <img src="img/IMG_4.jpg" alt="#">
+    <img src="img/IMG_5.jpg" alt="#">
+    <img src="img/IMG_6.jpg" alt="#">
+    <img src="img/IMG_7.jpg" alt="#">
+    <img src="img/IMG_8.jpg" alt="#">
+    <img src="img/IMG_9.jpg" alt="#">
+    <img src="img/IMG_10.jpg" alt="#">
+  </section>
   <script>
     $(document).ready(function () {
-      $('.img img').click(function () {
-        var imgSrc = $(this).attr('src');
-        $('body').append('<div class="overlay"><div class="image"><img src="' + imgSrc + '"></div></div>');
-        $('.overlay').fadeIn();
-      });
-      $('body').on('click', '.overlay', function () {
-        $(this).fadeOut(function () {
-          $(this).remove();
+      if ($(window).width() > 1024) { // Проверяем ширину экрана
+        $('.img img').click(function () {
+          var imgSrc = $(this).attr('src');
+          $('body').append('<div class="overlay"><div class="image"><img src="' + imgSrc + '"></div></div>');
+          $('.overlay').fadeIn();
         });
-      });
+        $('body').on('click', '.overlay', function () {
+          $(this).fadeOut(function () {
+            $(this).remove();
+          });
+        });
+      }
     });
   </script>
 </body>
