@@ -30,21 +30,25 @@ body {
   background-color: var(--background);
 }
 
-
 .header img:hover {
   animation: rotate 1s ease-in-out forwards;
 }
 
 .header .text {
   text-shadow: var(--text-shadow);
-  font-size: 1.5rem;
+  font-size: 3rem;  
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+} 
+.header .text #p{
+  font-size: 2.5rem;
 }
-
 .description {
   margin: 20px 0;
 }
 
-p {
+.description p {
   display: flex;
   justify-content: center;
   font-size: 1.75rem;
