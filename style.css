@@ -1,6 +1,5 @@
 :root {
   --background: #130934;
-  --background2: #340933;
   --accent: #007bff;
   --box-shadow: 0 0 10px var(--accent), 0 0 5px var(--accent);
   --text-color: #ffffff;
@@ -28,9 +27,9 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: #10062F;
-  background: linear-gradient(135deg, var(--background), var(--background2));
+  background-color: var(--background);
 }
+
 
 .header img:hover {
   animation: rotate 1s ease-in-out forwards;
