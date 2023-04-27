@@ -1,9 +1,12 @@
 :root {
-  --background: #181425;
-  --accent: #5081b5;
+  --background: #130934;
+  --background2: #340933;
+  --accent: #007bff;
   --box-shadow: 0 0 10px var(--accent), 0 0 5px var(--accent);
   --text-color: #ffffff;
-  --text-shadow: 0 0 1px var(--text-color), 0 0 20px var(--text-color);
+  --text-color2: #00b3ff;
+  --text-shadow: 0 0 1px var(--text-color2), 0 0 100px var(--text-color2),
+    0 0 20px var(--text-color2);
 }
 
 * {
@@ -19,12 +22,14 @@
 }
 
 body {
+  padding: 30px 0px;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: var(--background);
+  background: #10062F;
+  background: linear-gradient(135deg, var(--background), var(--background2));
 }
 
 .header img:hover {
@@ -36,17 +41,14 @@ body {
   font-size: 1.5rem;
 }
 
-.header .text .description {
-  display: flex;
-  justify-content: start;
-  gap: 10px;
+.description {
+  margin: 20px 0;
 }
 
 p {
   display: flex;
   justify-content: center;
   font-size: 1.75rem;
-  margin: 20px 0;
   text-shadow: var(--text-shadow);
 }
 
@@ -76,6 +78,7 @@ hr {
   width: 60px;
   margin: 0 10px;
   border: 2px solid var(--accent);
+  overflow: hidden;
 }
 
 .links span a {
@@ -116,8 +119,9 @@ hr {
     width: 1250px;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
     justify-content: center;
+    transform: scale(0.9);
   }
 
   .img img {
@@ -129,7 +133,10 @@ hr {
 
   .img img:hover {
     box-shadow: 0 0 20px var(--accent);
+    transform: scale(1.2);
+    z-index: 1;
   }
+
 
   .overlay {
     position: fixed;
@@ -172,9 +179,6 @@ hr {
     margin: 0 40px;
   }
 
-  .header .text .description {
-    justify-content: center;
-  }
 
   .links span {
     border-radius: 100%;
@@ -197,5 +201,11 @@ hr {
     width: 90%;
     border-radius: 20px;
     border: 2px solid var(--accent);
+  }
+
+  .header .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
